@@ -1,0 +1,136 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+html::-webkit-scrollbar
+    width: 0
+html
+    width: 100vw
+    height: 100vh
+    // font-family: relaway, sans-serif
+    font-family: roboto
+    font-weight: lighter
+    color: $color_2
+    background: black
+    scroll-behavior: smooth
+
+body
+    width: 100vw
+    height: 100vh
+    transition: all .3s
+body::after
+	content: ''
+	width: 100vw
+	height: 100vh
+	position: fixed
+	top: 0vh
+	left: 0
+	background: #000000
+	opacity: 0
+	display: none
+    transition: all .3s
+.loading::after
+	opacity: 1
+	display: block
+	animation: trans 400ms alternate infinite
+.wrap
+    position: relative
+.wrap,footer
+    width: 100vw
+    height: auto
+    @include flex(center, center, column nowrap)
+.cont-catalogo, .cont-contacto, .cont-login-admin, .cont-editar-admin, .cont-crear-admin
+    background-image: url(../src/fondo-1.png)
+.cont-inicio, .cont-catalogo
+    @include flex(center, center, column nowrap)
+.cont-login-admin, .cont-editar-admin, .cont-crear-admin
+    @include flex(center, center, column nowrap)
+///////////////////////////////////////////////
+
+.contenedor
+    width: 100%
+    height: auto
+    min-height: 100vh
+    padding-bottom: 50px
+    background-repeat: none
+    background-size: cover
+    background-position: bottom
+.navbar
+    position: fixed
+    top: 0px
+    left: -180px
+    width: 180px
+    height: 100vh
+    background: rgba(0, 0, 0, .5)
+    transition: 200ms linear
+    &.activa
+        left: 0px
+footer
+    position: absolute
+    bottom: 0
+    padding: 10px 
+///////////////////////////////////////////////
+
+a
+    display: block
+    color: $color_2
+    text-decoration: none
+    cursor: pointer
+input, textarea, a, img
+    transition: 200ms ease
+.errores
+    font-size: 14px
+input[type='text'], input[type='password'], textarea
+    padding: 0px 5px
+    height: 30px
+    border: solid 1px $color_1_n
+    outline: none
+    background: none
+    color: $color_2
+    &:hover, &:focus
+        border-color: $color_1_h
+input[type="submit"]
+    background: $color_2
+    color: $color_1_n
+    height: 35px
+    outline: none
+    border: none
+    cursor: pointer
+    &:hover
+        background: $color_1_h
+        color: $color_2
+h1
+    letter-spacing: 5px
+    margin-bottom: 5px
+form
+    width: 300px
+    padding: 10px
+    background: rgba(0, 0, 0, .5)
+    @include flex(start, start, column nowrap)
+    &>*
+        width: 100%
+        margin: 5px 0px
+input[type="file"]
+label
+    text-align: center
+    margin
+.btn
+    text-align: center
+    padding: 8px 15px
+    background: rgba(0,0,0,1)
+    &:hover
+        background: $color_1_n
+    &.activa
+        background: $color_1_h
+    &.disabled
+        background: rgba(0,0,0,.5)
+        cursor: not-allowed
+//////////////////////////////////////////////
+
+@keyframes trans 
+	from
+		opacity: 0
+	to
+		opacity: 1
+
+	

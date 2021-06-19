@@ -1,0 +1,44 @@
+.cont-contacto
+    @include flex(space-evenly, center, row wrap)
+    form
+        padding: 10px
+        margin-bottom: 20px
+        width: 250px
+        height: 280px
+        background: rgba(0, 0, 0, .5)
+        @include flex(space-between, center, column nowrap)
+        &>*
+            width: 100%
+        input, textarea
+            border: solid 1px $color_1_n
+            outline: none
+            background: transparent
+            color: $color_2
+            &:hover, &:focus
+                border: solid 1px $color_1_h
+        input[type="text"]
+            height: 30px
+        textarea
+            height: 60px
+        .tipo-torta, .tamano-torta
+            @include flex(space-evenly, center, row wrap)
+            label
+                text-align: center
+                margin-bottom: 10px
+                width: 100%
+        input[type="submit"]
+            border: none
+            height: 40px
+            background: #252525
+            cursor: pointer
+            &:hover
+                background: $color_1_n
+    .map
+        width: 300px
+        height: auto
+        h4
+            text-align: center
+            margin-bottom: 10px
+        .direccion
+            height: 350px
+            background: black  

@@ -1,0 +1,54 @@
+.navbar
+    ul
+        height: 100%
+        list-style: none
+        @include flex(space-start, center, column nowrap)
+        li
+            position: relative
+            width: 100%
+            height: auto
+            margin-bottom: 5px
+            a
+                position: relative
+                text-align: center
+                width: 100%
+                height: 100%
+                padding: 5px
+                    
+                &.activa
+                    background-color: $color_1_n
+                    font-weight: bold
+            div
+                transition: 200ms ease
+        li a.activa + div
+                        display: block
+                        position: absolute
+                        right: -40px
+                        top: 0
+                        width: 40px
+                        height: 100%
+                        background-image: url(../src/selector.svg)
+                        background-repeat: no-repeat
+                        background-position: right
+                        background-size: cover
+                        cursor: pointer
+                        transition: 200ms ease
+
+            
+
+        li:nth-child(1) img
+            width: 100px
+            height: 100px
+        .redes 
+            @include flex(center, center, column nowrap)
+            .red
+                text-align: center
+                margin-bottom: 5px
+                padding: 0
+                width: 30px
+                height: 30px
+                background: $color_2
+                border-radius: 50%
+                color: $color_1_n
+                &:hover
+                    background: #eee

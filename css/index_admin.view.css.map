@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACR,gBAAgB,EAAE,OAAO;CAAG",
+    "sources": [
+        "index_admin.view.sass"
+    ],
+    "names": [],
+    "file": "index_admin.view.css"
+}

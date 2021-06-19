@@ -1,0 +1,34 @@
+.cont-inicio
+    background-image: url(../src/fondo.png)
+    .texto
+        width: 400px
+        height: auto
+        @include flex(start, center, column nowrap)
+        font-size: 1rem
+        &>*
+            margin: 10px
+        h1
+            font-family: 'Dancing Scrip'
+            color: $color_1_n
+            font-size: 3em
+        p
+            font-size: 2em
+            text-align: center
+        .botones
+            width: 100%
+            @include flex(space-evenly, center, row nowrap)
+            a
+                padding: 5px 15px
+                font-size: 1.5em
+                border-radius: 20px
+                font-weight: 400
+            .contacto
+                background: $color_2
+                color: $color_1_n
+                &:hover
+                    background: #eee
+                    color: $color_1_h
+            .pedido
+                background: $color_1_n
+                &:hover
+                    background: $color_1_h
